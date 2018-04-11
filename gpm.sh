@@ -22,14 +22,16 @@ gitStatusCheck() {
     echo "2. Reset the uncommit code "
     echo "3. Commit the uncommit code"
     echo "4. Diff the uncommit code"
+    echo "5. Ignore the uncommit code and continue"
     read choice
     [[ $choice -eq 1 ]] && git stash
     [[ $choice -eq 2 ]] && (git add . && git reset --hard)
     [[ $choice -eq 3 ]] && (echo "Please Input Your Commit Message:" && read commitMsg && echo $commitMsg && git add . && git commit -m "$commitMsg")
     # Shell will be terminated after git diff so we recurse the func
     [[ $choice -eq 4 ]] && (git diff && gitStatusCheck $1)
+    [[ $choice -eq 5 ]] && (return 1)
     # Input Error And Recurse The Choice
-    choiceArr=(1 2 3 4)
+    choiceArr=(1 2 3 4 5)
     [[ "${choiceArr[@]/$choice/}" == "${choiceArr[@]}" ]] && echo -e "${COLOR_RED}The Choice You Make Not In The List Please Try Again : )\n${COLOR_NORMAL}" && gitStatusCheck $1
   fi
 }
