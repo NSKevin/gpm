@@ -8,11 +8,11 @@
 
 #### Usage: `gpm ./pathOfPodfile`
 
-![Choice](images/pic1.png)
+![Choice](images/1.png)
 
 #### When the `gpm` finished:
 
-![Choice](images/pic2.png)
+![Choice](images/2.png)
 
 # Make Your Own Command With `gpm`
 ### 0. run `sudo chmod +x gpm.sh`
@@ -23,11 +23,11 @@
 
 ### 3. copy this file to `/usr/local/bin`
 
-![Choice](images/pic4.png)
+![Choice](images/4.png)
 
 ### 4. run the command in terminal
 
-![Choice](images/pic3.png)
+![Choice](images/3.png)
 
 Done, have fun : )
 
