@@ -1,6 +1,6 @@
-# Git Pull Man (`iOS Only~ It's based on the podfile`)
+# Git Pull Man
 
-#### This tool is using for `git pull`. When you have a lot pods in local path for development, you have to update them one by one and easy to forget which one has been forgotten.Maybe this will cause a compile error.Then GPM born!
+#### This tool is using for `git pull`. When you have a lot pods in local path for development, you have to update them one by one and easy to forget which one has been forgotten.Maybe this will cause a compile error.Then GPM born!`iOS Only~ It's based on the podfile`.
 
 #### When you run the `gpm` and you have uncommit code at this time.You have 4 choices Stash  Reset  Commit  Diff.
 
