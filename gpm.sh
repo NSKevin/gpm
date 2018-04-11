@@ -38,11 +38,11 @@ dealWithGitJob() {
   currentPath=`pwd`
   [[ ${currentPath:-1} == "/" ]] && gitPath="`pwd`$1" || gitPath="`pwd`/$1"
   cd $gitPath
-  echo -e "${COLOR_YELLOW} Start Dealing With ${COLOR_YELLOW} ${COLOR_RED} $1 ${COLOR_RED}"
+  echo -e "\n${COLOR_YELLOW}👷 Start Dealing With ${COLOR_YELLOW} ${COLOR_RED} $1 ${COLOR_RED}\n"
   # Check The Status First
   gitStatusCheck $1
   git pull
-  echo -e "${COLOR_GREEN}=====================  Success: $1 =====================${COLOR_NORMAL}"
+  echo -e "\n${COLOR_GREEN}😎 Success: $1${COLOR_NORMAL} \n"
   cd $currentPath
 }
 
@@ -50,7 +50,7 @@ dealWithGitJob() {
 # Check Path
 ##################################################
 cd $shellPath
-[[ $? -ne 0 ]] && (echo -e "${COLOR_RED}=====================  Error: Invalid Parameter (Path)  =====================${COLOR_NORMAL}" && exit)
+[[ $? -ne 0 ]] && (echo -e "\n${COLOR_RED}😈 Error: Invalid Parameter (Path)${COLOR_NORMAL} \n" && exit)
 
 ##################################################
 # Get Podfile Path
@@ -61,7 +61,7 @@ podfilePath="Podfile"
 ##################################################
 # Check Pod File
 ##################################################
-[[ ! -f "$podfilePath" ]] && (echo -e "${COLOR_RED}===================== Error:  There's No Podfile In The Path You Input  =====================${COLOR_NORMAL}" && exit)
+[[ ! -f "$podfilePath" ]] && (echo -e "\n${COLOR_RED}😈 Error:  There's No Podfile In The Path You Input ${COLOR_NORMAL} \n" && exit)
 
 ##################################################
 # Get Local Develop Pod Name From Podfile
@@ -88,4 +88,4 @@ do
   dealWithGitJob $pod
 done
 
-echo -e "\n${COLOR_GREEN}All Jobs Has Been Done! 🙂${COLOR_NORMAL}"
+echo -e "\n${COLOR_GREEN}🔥🔥🔥🔥🔥🔥🔥 All Jobs Has Been Done! ${COLOR_NORMAL}"
