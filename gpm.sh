@@ -40,11 +40,11 @@ dealWithGitJob() {
   currentPath=`pwd`
   [[ ${currentPath:-1} == "/" ]] && gitPath="`pwd`$1" || gitPath="`pwd`/$1"
   cd $gitPath
-  echo -e "\n${COLOR_YELLOW}👷 Start Dealing With ${COLOR_YELLOW} ${COLOR_RED} $1 ${COLOR_RED}\n"
+  echo -e "\n${COLOR_YELLOW}👷 Start Dealing With ${COLOR_RED} $1 ${COLOR_NORMAL}\n"
   # Check The Status First
   gitStatusCheck $1
   git pull
-  echo -e "\n${COLOR_GREEN}😎 Success: $1${COLOR_NORMAL} \n"
+  echo -e "\n${COLOR_GREEN}😎 Success: $1${COLOR_NORMAL}\n"
   cd $currentPath
 }
 
