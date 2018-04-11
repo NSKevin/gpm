@@ -2,7 +2,7 @@
 
 #### This tool is using for `git pull`. When you have a lot pods in local path for development, you have to update them one by one and easy to forget which one has been forgotten.Maybe this will cause a compile error.Then GPM born!`iOS Only~ It's based on the podfile`.
 
-#### When you run the `gpm` and you have uncommit code at this time.You have 4 choices Stash  Reset  Commit  Diff.
+#### When you run the `gpm` and you have uncommit code at this time.You have 5 choices Stash  Reset  Commit  Diff.
 
 #### When you want to commit the code, then `gpm` will let you to input the commit message
 
