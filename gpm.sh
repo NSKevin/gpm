@@ -75,9 +75,10 @@ podIndex=0
 for line in ${linesOfPods[*]}
 do
   if [[ $line =~ ".podspec" ]]; then
-    #translate / to \n then make it to an array
-    podNameArray=(`echo $line | tr "/" "\n"`)
-    podDir[podIndex]=${podNameArray[1]}
+    #delete ' " , / then make other words into an array
+    podNameArray=(`echo $line | tr "'" " " | tr """" " " | tr "," " " | tr "/" "\n"`)
+    pathIndex=$[${#podNameArray[@]} - 1 - 1]
+    podDir[podIndex]=${podNameArray[$pathIndex]}
     podIndex=$[$podIndex + 1]
   fi
 done
