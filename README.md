@@ -1,3 +1,7 @@
+<p align="center" >
+  <img src="https://github.com/NSKevin/gpm/blob/master/images/gpm-logo.png" alt="GPM" title="GPM">
+</p>
+
 # Git Pull Man
 
 #### This tool is using for `git pull`. When you have a lot pods in local path for development, you have to update them one by one and easy to forget which one has been forgotten.Maybe this will cause a compile error.Then GPM born!`iOS Only~ It's based on the podfile`.
